@@ -1,0 +1,10 @@
+page\UserHomePage.class
+test\TestApiResponses.class
+page\ApiKeysPage.class
+test\TestApiResponseScheme.class
+test\TestApiKeyGeneration.class
+page\AbstractPage.class
+test\AbstractApiTest.class
+test\AbstractUITest.class
+page\MainPage.class
+page\LoginPage.class

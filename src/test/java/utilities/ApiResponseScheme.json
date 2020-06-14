@@ -1,0 +1,553 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema",
+	"$id": "http://example.com/example.json",
+	"type": "object",
+	"title": "The root schema",
+	"description": "The root schema comprises the entire JSON document.",
+	"examples": [
+		{
+			"coord": {
+				"lon": -122.09,
+				"lat": 37.39
+			},
+			"weather": [
+				{
+					"id": 802,
+					"main": "Clouds",
+					"description": "scattered clouds",
+					"icon": "03d"
+				}
+			],
+			"base": "stations",
+			"main": {
+				"temp": 292.63,
+				"feels_like": 288.34,
+				"temp_min": 290.37,
+				"temp_max": 293.71,
+				"pressure": 1019,
+				"humidity": 59
+			},
+			"visibility": 16093,
+			"wind": {
+				"speed": 6.7,
+				"deg": 350,
+				"gust": 2.68
+			},
+			"rain": {
+				"1h": 0.14,
+				"3h": 0.45
+			},
+			"snow": {
+				"1h": 0.14,
+				"3h": 0.45
+			},
+			"clouds": {
+				"all": 40
+			},
+			"dt": 1592072484,
+			"sys": {
+				"type": 1,
+				"id": 5310,
+				"country": "US",
+				"sunrise": 1592052427,
+				"sunset": 1592105410
+			},
+			"timezone": -25200,
+			"id": 0,
+			"name": "Mountain View",
+			"cod": 200
+		}
+	],
+	"required": [
+		"coord",
+		"weather",
+		"base",
+		"main",
+		"wind",
+		"clouds",
+		"dt",
+		"sys",
+		"timezone",
+		"id",
+		"name",
+		"cod"
+	],
+	"additionalProperties": true,
+	"properties": {
+		"coord": {
+			"$id": "#/properties/coord",
+			"type": "object",
+			"title": "The coord schema",
+			"description": "City geo location",			
+			"examples": [
+				{
+					"lon": -122.09,
+					"lat": 37.39
+				}
+			],
+			"required": [
+				"lon",
+				"lat"
+			],
+			"additionalProperties": true,
+			"properties": {
+				"lon": {
+					"$id": "#/properties/coord/properties/lon",
+					"type": "number",
+					"title": "The lon schema",
+					"description": "City geo location, longitude.",					
+					"examples": [
+						-122.09
+					]
+				},
+				"lat": {
+					"$id": "#/properties/coord/properties/lat",
+					"type": "number",
+					"title": "The lat schema",
+					"description": "City geo location, latitude.",					
+					"examples": [
+						37.39
+					]
+				}
+			}
+		},
+		"weather": {
+			"$id": "#/properties/weather",
+			"type": "array",
+			"title": "The weather schema",
+			"description": "Weather conditions.",			
+			"examples": [
+				[
+					{
+						"id": 802,
+						"main": "Clouds",
+						"description": "scattered clouds",
+						"icon": "03d"
+					}
+				]
+			],
+			"additionalItems": true,
+			"items": {
+				"anyOf": [
+					{
+						"$id": "#/properties/weather/items/anyOf/0",
+						"type": "object",
+						"title": "The first anyOf schema",
+						"description": "An explanation about the purpose of this instance.",						
+						"examples": [
+							{
+								"id": 802,
+								"main": "Clouds",
+								"description": "scattered clouds",
+								"icon": "03d"
+							}
+						],
+						"required": [
+							"id",
+							"main",
+							"description",
+							"icon"
+						],
+						"additionalProperties": true,
+						"properties": {
+							"id": {
+								"$id": "#/properties/weather/items/anyOf/0/properties/id",
+								"type": "integer",
+								"title": "The id schema",
+								"description": "Weather condition id.",								
+								"examples": [
+									802
+								]
+							},
+							"main": {
+								"$id": "#/properties/weather/items/anyOf/0/properties/main",
+								"type": "string",
+								"title": "The main schema",
+								"description": " Group of weather parameters (Rain, Snow, Extreme etc.).",								
+								"examples": [
+									"Clouds"
+								]
+							},
+							"description": {
+								"$id": "#/properties/weather/items/anyOf/0/properties/description",
+								"type": "string",
+								"title": "The description schema",
+								"description": "Weather condition within the group. You can get the output in your language.",								
+								"examples": [
+									"scattered clouds"
+								]
+							},
+							"icon": {
+								"$id": "#/properties/weather/items/anyOf/0/properties/icon",
+								"type": "string",
+								"title": "The icon schema",
+								"description": "Weather icon id.",								
+								"examples": [
+									"03d"
+								]
+							}
+						}
+					}
+				],
+				"$id": "#/properties/weather/items"
+			}
+		},
+		"base": {
+			"$id": "#/properties/base",
+			"type": "string",
+			"title": "The base schema",
+			"description": "Internal parameter.",			
+			"examples": [
+				"stations"
+			]
+		},
+		"main": {
+			"$id": "#/properties/main",
+			"type": "object",
+			"title": "The main schema",
+			"description": "Main parameters.",			
+			"examples": [
+				{
+					"temp": 292.63,
+					"feels_like": 288.34,
+					"temp_min": 290.37,
+					"temp_max": 293.71,
+					"pressure": 1019,
+					"humidity": 59
+				}
+			],
+			"required": [
+				"temp",
+				"feels_like",
+				"temp_min",
+				"temp_max",
+				"pressure",
+				"humidity"
+			],
+			"additionalProperties": true,
+			"properties": {
+				"temp": {
+					"$id": "#/properties/main/properties/temp",
+					"type": "number",
+					"title": "The temp schema",
+					"description": "Temperature. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.",					
+					"examples": [
+						292.63
+					]
+				},
+				"feels_like": {
+					"$id": "#/properties/main/properties/feels_like",
+					"type": "number",
+					"title": "The feels_like schema",
+					"description": "Temperature. This temperature parameter accounts for the human perception of weather. Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.",					
+					"examples": [
+						288.34
+					]
+				},
+				"temp_min": {
+					"$id": "#/properties/main/properties/temp_min",
+					"type": "number",
+					"title": "The temp_min schema",
+					"description": "Minimum temperature at the moment. This is minimal currently observed temperature (within large megalopolises and urban areas). Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.",					
+					"examples": [
+						290.37
+					]
+				},
+				"temp_max": {
+					"$id": "#/properties/main/properties/temp_max",
+					"type": "number",
+					"title": "The temp_max schema",
+					"description": "Maximum temperature at the moment. This is maximal currently observed temperature (within large megalopolises and urban areas). Unit Default: Kelvin, Metric: Celsius, Imperial: Fahrenheit.",
+					"examples": [
+						293.71
+					]
+				},
+				"pressure": {
+					"$id": "#/properties/main/properties/pressure",
+					"type": "integer",
+					"title": "The pressure schema",
+					"description": "Atmospheric pressure (on the sea level, if there is no sea_level or grnd_level data), hPa",					
+					"examples": [
+						1019
+					]
+				},
+				"humidity": {
+					"$id": "#/properties/main/properties/humidity",
+					"type": "integer",
+					"title": "The humidity schema",
+					"description": "Humidity, %",					
+					"examples": [
+						59
+					]
+				}
+			}
+		},
+		"visibility": {
+			"$id": "#/properties/visibility",
+			"type": "integer",
+			"title": "The visibility schema",
+			"description": "Visibility.",			
+			"examples": [
+				16093
+			]
+		},
+		"wind": {
+			"$id": "#/properties/wind",
+			"type": "object",
+			"title": "The wind schema",
+			"description": "Wind properties.",			
+			"examples": [
+				{
+					"speed": 6.7,
+					"deg": 350,
+					"gust": 2.68
+				}
+			],
+			"required": [
+				"speed",
+				"deg"
+			],
+			"additionalProperties": true,
+			"properties": {
+				"speed": {
+					"$id": "#/properties/wind/properties/speed",
+					"type": "number",
+					"title": "The speed schema",
+					"description": "Wind speed. Unit Default: meter/sec, Metric: meter/sec, Imperial: miles/hour.",					
+					"examples": [
+						6.7
+					]
+				},
+				"deg": {
+					"$id": "#/properties/wind/properties/deg",
+					"type": "integer",
+					"title": "The deg schema",
+					"description": "Wind direction, degrees (meteorological).",					
+					"examples": [
+						350
+					]
+				},
+				"gust": {
+					"$id": "#/properties/wind/properties/gust",
+					"type": "number",
+					"title": "The gust schema",
+					"description": "An explanation about the purpose of this instance.",					
+					"examples": [
+						2.68
+					]
+				}
+			}
+		},
+		"rain": {
+			"$id": "#/properties/rain",
+			"type": "object",
+			"title": "The rain schema",
+			"description": "An explanation about the purpose of this instance.",			
+			"examples": [
+				{
+					"1h": 0.14,
+					"3h": 0.45
+				}
+			],
+			"additionalProperties": true,
+			"properties": {
+				"1h": {
+					"$id": "#/properties/rain/properties/1h",
+					"type": "number",
+					"title": "The 1h schema",
+					"description": "Rain volume for the last 1 hour, mm.",					
+					"examples": [
+						0.14
+					]
+				},
+				"3h": {
+					"$id": "#/properties/rain/properties/3h",
+					"type": "number",
+					"title": "The 3h schema",
+					"description": "Rain volume for the last 3 hours, mm.",					
+					"examples": [
+						0.45
+					]
+				}
+			}
+		},
+		"snow": {
+			"$id": "#/properties/snow",
+			"type": "object",
+			"title": "The snow schema",
+			"description": "An explanation about the purpose of this instance.",			
+			"examples": [
+				{
+					"1h": 0.14,
+					"3h": 0.45
+				}
+			],
+			"required": [
+				"1h",
+				"3h"
+			],
+			"additionalProperties": true,
+			"properties": {
+				"1h": {
+					"$id": "#/properties/snow/properties/1h",
+					"type": "number",
+					"title": "The 1h schema",
+					"description": "An explanation about the purpose of this instance.",					
+					"examples": [
+						0.14
+					]
+				},
+				"3h": {
+					"$id": "#/properties/snow/properties/3h",
+					"type": "number",
+					"title": "The 3h schema",
+					"description": "An explanation about the purpose of this instance.",					
+					"examples": [
+						0.45
+					]
+				}
+			}
+		},
+		"clouds": {
+			"$id": "#/properties/clouds",
+			"type": "object",
+			"title": "The clouds schema",
+			"description": "Cloud parameters.",			
+			"examples": [
+				{
+					"all": 40
+				}
+			],
+			"required": [
+				"all"
+			],
+			"additionalProperties": true,
+			"properties": {
+				"all": {
+					"$id": "#/properties/clouds/properties/all",
+					"type": "integer",
+					"title": "The all schema",
+					"description": "Cloudiness, %.",					
+					"examples": [
+						40
+					]
+				}
+			}
+		},
+		"dt": {
+			"$id": "#/properties/dt",
+			"type": "integer",
+			"title": "The dt schema",
+			"description": "Time of data calculation, unix, UTC.",			
+			"examples": [
+				1592072484
+			]
+		},
+		"sys": {
+			"$id": "#/properties/sys",
+			"type": "object",
+			"title": "The sys schema",
+			"description": "System properties.",			
+			"examples": [
+				{
+					"type": 1,
+					"id": 5310,
+					"country": "US",
+					"sunrise": 1592052427,
+					"sunset": 1592105410
+				}
+			],
+			"required": [
+				"type",
+				"id",
+				"country",
+				"sunrise",
+				"sunset"
+			],
+			"additionalProperties": true,
+			"properties": {
+				"type": {
+					"$id": "#/properties/sys/properties/type",
+					"type": "integer",
+					"title": "The type schema",
+					"description": "Internal parameter.",					
+					"examples": [
+						1
+					]
+				},
+				"id": {
+					"$id": "#/properties/sys/properties/id",
+					"type": "integer",
+					"title": "The id schema",
+					"description": "Internal parameter.",					
+					"examples": [
+						5310
+					]
+				},
+				"country": {
+					"$id": "#/properties/sys/properties/country",
+					"type": "string",
+					"title": "The country schema",
+					"description": " Country code (GB, JP etc.).",					
+					"examples": [
+						"US"
+					]
+				},
+				"sunrise": {
+					"$id": "#/properties/sys/properties/sunrise",
+					"type": "integer",
+					"title": "The sunrise schema",
+					"description": " Sunrise time, unix, UTC.",					
+					"examples": [
+						1592052427
+					]
+				},
+				"sunset": {
+					"$id": "#/properties/sys/properties/sunset",
+					"type": "integer",
+					"title": "The sunset schema",
+					"description": "Sunset time, unix, UTC.",					
+					"examples": [
+						1592105410
+					]
+				}
+			}
+		},
+		"timezone": {
+			"$id": "#/properties/timezone",
+			"type": "integer",
+			"title": "The timezone schema",
+			"description": "Shift in seconds from UTC.",			
+			"examples": [
+				-25200
+			]
+		},
+		"id": {
+			"$id": "#/properties/id",
+			"type": "integer",
+			"title": "The id schema",
+			"description": "City ID.",			
+			"examples": [
+				0
+			]
+		},
+		"name": {
+			"$id": "#/properties/name",
+			"type": "string",
+			"title": "The name schema",
+			"description": "City name",			
+			"examples": [
+				"Mountain View"
+			]
+		},
+		"cod": {
+			"$id": "#/properties/cod",
+			"type": "integer",
+			"title": "The cod schema",
+			"description": "Internal parameter.",			
+			"examples": [
+				200
+			]
+		}
+	}
+}

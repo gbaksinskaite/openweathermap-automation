@@ -66,7 +66,7 @@ public class LoginPage extends AbstractPage {
 	/* SELECT CHECKBOXES */
 
 	public void selectCheckBoxRememberMe() {
-		checkBoxRememberMe.click();
+		checkBoxRememberMe.click(); 
 	}
 
 	/* WAITS */

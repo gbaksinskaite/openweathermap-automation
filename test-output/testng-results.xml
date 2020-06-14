@@ -2,31 +2,23 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11747" started-at="2020-06-11T13:25:55Z" finished-at="2020-06-11T13:26:07Z">
+  <suite name="Default suite" duration-ms="1853" started-at="2020-06-14T14:53:14Z" finished-at="2020-06-14T14:53:16Z">
     <groups>
-      <group name="">
-        <method signature="TestApiKeyGeneration.testApiKeysGeneration()[pri:0, instance:test.TestApiKeyGeneration@4c70fda8]" name="testApiKeysGeneration" class="test.TestApiKeyGeneration"/>
-      </group> <!--  -->
+      <group name="API">
+        <method signature="TestApiResponseScheme.testApiResponseScheme()[pri:0, instance:test.TestApiResponseScheme@31ef45e3]" name="testApiResponseScheme" class="test.TestApiResponseScheme"/>
+      </group> <!-- API -->
     </groups>
-    <test name="Default test" duration-ms="11747" started-at="2020-06-11T13:25:55Z" finished-at="2020-06-11T13:26:07Z">
-      <class name="test.TestApiKeyGeneration">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:test.TestApiKeyGeneration@4c70fda8]" name="beforeSuite" is-config="true" duration-ms="7845" started-at="2020-06-11T13:25:55Z" finished-at="2020-06-11T13:26:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="preconditions()[pri:0, instance:test.TestApiKeyGeneration@4c70fda8]" name="preconditions" is-config="true" duration-ms="33" started-at="2020-06-11T13:26:03Z" finished-at="2020-06-11T13:26:03Z">
+    <test name="Default test" duration-ms="1853" started-at="2020-06-14T14:53:14Z" finished-at="2020-06-14T14:53:16Z">
+      <class name="test.TestApiResponseScheme">
+        <test-method status="PASS" signature="preconditions()[pri:0, instance:test.TestApiResponseScheme@31ef45e3]" name="preconditions" is-config="true" duration-ms="16" started-at="2020-06-14T14:53:14Z" finished-at="2020-06-14T14:53:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preconditions -->
-        <test-method status="PASS" signature="testApiKeysGeneration()[pri:0, instance:test.TestApiKeyGeneration@4c70fda8]" name="testApiKeysGeneration" duration-ms="3025" started-at="2020-06-11T13:26:03Z" finished-at="2020-06-11T13:26:06Z">
+        <test-method status="PASS" signature="testApiResponseScheme()[pri:0, instance:test.TestApiResponseScheme@31ef45e3]" name="testApiResponseScheme" duration-ms="1821" started-at="2020-06-14T14:53:14Z" finished-at="2020-06-14T14:53:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testApiKeysGeneration -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:test.TestApiKeyGeneration@4c70fda8]" name="afterSuite" is-config="true" duration-ms="830" started-at="2020-06-11T13:26:06Z" finished-at="2020-06-11T13:26:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- test.TestApiKeyGeneration -->
+        </test-method> <!-- testApiResponseScheme -->
+      </class> <!-- test.TestApiResponseScheme -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

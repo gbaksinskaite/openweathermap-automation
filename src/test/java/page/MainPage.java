@@ -39,7 +39,7 @@ public class MainPage extends AbstractPage {
 	/* CLICK LINKS */
 
 	public void clickLinkGetStarted() {
-		linkGetStarted.click();
+		linkGetStarted.click(); 
 	}
 
 	public void clickLinkAPI() {

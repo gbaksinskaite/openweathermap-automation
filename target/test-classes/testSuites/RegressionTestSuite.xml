@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="testApiKeyGeneration">
+	<test name="testApiKeyGeneration">
+		<parameter name="email" value="gbaksinskaite@gmail.com" />
+		<parameter name="password" value="ifJ8g@a9jYe8Qy7" />
+		<classes>
+			<class name="test.TestApiKeyGeneration"/>
+		</classes>
+	</test>
+</suite>

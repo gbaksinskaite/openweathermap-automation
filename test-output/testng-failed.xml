@@ -3,14 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.TestApiKeyGeneration">
+      <class name="test.TestApiResponseScheme">
         <methods>
+          <include name="testApiResponseScheme"/>
           <include name="preconditions"/>
-          <include name="beforeSuite"/>
-          <include name="testApiKeysGeneration"/>
-          <include name="afterSuite"/>
         </methods>
-      </class> <!-- test.TestApiKeyGeneration -->
+      </class> <!-- test.TestApiResponseScheme -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

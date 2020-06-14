@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class UserHomePage extends AbstractPage {
 
 	public UserHomePage(WebDriver driver) {
-		super(driver);
+		super(driver); 
 	}
 
 	/* LINKS */

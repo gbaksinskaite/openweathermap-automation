@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [regressionTests]">
+  <test thread-count="5" name="testApiKeyGeneration(failed)">
+    <classes>
+      <class name="test.TestApiKeyGeneration">
+        <methods>
+          <include name="preconditions"/>
+          <include name="afterMethod"/>
+          <include name="testApiKeysGeneration"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- test.TestApiKeyGeneration -->
+    </classes>
+  </test> <!-- testApiKeyGeneration(failed) -->
+  <test thread-count="5" name="testApiResponses(failed)">
+    <classes>
+      <class name="test.TestApiResponses">
+        <methods>
+          <include name="testApiResponseVerifyZipCode"/>
+          <include name="testApiResponseInvalidKey"/>
+          <include name="preconditions"/>
+          <include name="testApiResponseInvalidCityName"/>
+          <include name="testApiResponseVerifyMultilingualSupport"/>
+          <include name="testApiResponseInvalidCityID"/>
+          <include name="testApiResponseVerifyCoordinates"/>
+          <include name="testApiResponseVerifyCityID"/>
+        </methods>
+      </class> <!-- test.TestApiResponses -->
+    </classes>
+  </test> <!-- testApiResponses(failed) -->
+</suite> <!-- Failed suite [regressionTests] -->

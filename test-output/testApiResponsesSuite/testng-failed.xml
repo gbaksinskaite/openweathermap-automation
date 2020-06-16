@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [testApiResponsesSuite]">
+  <test thread-count="5" name="ApiResponses(failed)">
+    <parameter name="zipCode" value="94040"/>
+    <parameter name="apiKey" value="60e77d77c29dd5441"/>
+    <parameter name="cityName2" value="Mountain View"/>
+    <parameter name="cityName3" value="Alytus"/>
+    <parameter name="cityNameTranslated" value="Kernsas"/>
+    <parameter name="filePath" value="src/test/java/utilities/ApiKey.txt"/>
+    <parameter name="cityId" value="2172797"/>
+    <parameter name="latitude1" value="-122.09"/>
+    <parameter name="languageCode" value="lt"/>
+    <parameter name="cityNameInvalid" value="VNO"/>
+    <parameter name="latitude2" value="54.4"/>
+    <parameter name="cityIdInvalid" value="666"/>
+    <parameter name="longitude2" value="24"/>
+    <parameter name="longitude1" value="37.39"/>
+    <parameter name="cityName" value="Cairns"/>
+    <classes>
+      <class name="test.API.TestApiResponses">
+        <methods>
+          <include name="testApiResponseInvalidKey"/>
+          <include name="testApiResponseVerifyCityID"/>
+          <include name="testApiResponseVerifyMultilingualSupport"/>
+          <include name="testApiResponseInvalidCityID"/>
+          <include name="preconditions"/>
+          <include name="testApiResponseInvalidCityName"/>
+          <include name="testApiResponseVerifyCoordinates"/>
+          <include name="testApiResponseVerifyZipCode"/>
+        </methods>
+      </class> <!-- test.API.TestApiResponses -->
+    </classes>
+  </test> <!-- ApiResponses(failed) -->
+</suite> <!-- Failed suite [testApiResponsesSuite] -->

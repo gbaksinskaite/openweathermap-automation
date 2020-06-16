@@ -2,23 +2,48 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1853" started-at="2020-06-14T14:53:14Z" finished-at="2020-06-14T14:53:16Z">
+  <suite name="testApiKeyGenerationSuite" duration-ms="11269" started-at="2020-06-16T10:11:01Z" finished-at="2020-06-16T10:11:13Z">
     <groups>
-      <group name="API">
-        <method signature="TestApiResponseScheme.testApiResponseScheme()[pri:0, instance:test.TestApiResponseScheme@31ef45e3]" name="testApiResponseScheme" class="test.TestApiResponseScheme"/>
-      </group> <!-- API -->
+      <group name="UI">
+        <method signature="TestApiKeyGeneration.testApiKeysGeneration(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="testApiKeysGeneration" class="test.UI.TestApiKeyGeneration"/>
+      </group> <!-- UI -->
     </groups>
-    <test name="Default test" duration-ms="1853" started-at="2020-06-14T14:53:14Z" finished-at="2020-06-14T14:53:16Z">
-      <class name="test.TestApiResponseScheme">
-        <test-method status="PASS" signature="preconditions()[pri:0, instance:test.TestApiResponseScheme@31ef45e3]" name="preconditions" is-config="true" duration-ms="16" started-at="2020-06-14T14:53:14Z" finished-at="2020-06-14T14:53:14Z">
+    <test name="ApiKeyGeneration" duration-ms="11269" started-at="2020-06-16T10:11:01Z" finished-at="2020-06-16T10:11:13Z">
+      <class name="test.UI.TestApiKeyGeneration">
+        <test-method status="PASS" signature="setUpDriver()[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="setUpDriver" is-config="true" duration-ms="6118" started-at="2020-06-16T10:11:01Z" finished-at="2020-06-16T10:11:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpDriver -->
+        <test-method status="PASS" signature="preconditions()[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="preconditions" is-config="true" duration-ms="46" started-at="2020-06-16T10:11:08Z" finished-at="2020-06-16T10:11:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preconditions -->
-        <test-method status="PASS" signature="testApiResponseScheme()[pri:0, instance:test.TestApiResponseScheme@31ef45e3]" name="testApiResponseScheme" duration-ms="1821" started-at="2020-06-14T14:53:14Z" finished-at="2020-06-14T14:53:16Z">
+        <test-method status="PASS" signature="testApiKeysGeneration(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="testApiKeysGeneration" duration-ms="4425" started-at="2020-06-16T10:11:08Z" finished-at="2020-06-16T10:11:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[gbaksinskaite@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ifJ8g@a9jYe8Qy7]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[src/test/java/utilities/ApiKey.txt]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testApiResponseScheme -->
-      </class> <!-- test.TestApiResponseScheme -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- testApiKeysGeneration -->
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="quitDriver" is-config="true" duration-ms="648" started-at="2020-06-16T10:11:12Z" finished-at="2020-06-16T10:11:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitDriver -->
+      </class> <!-- test.UI.TestApiKeyGeneration -->
+    </test> <!-- ApiKeyGeneration -->
+  </suite> <!-- testApiKeyGenerationSuite -->
 </testng-results>

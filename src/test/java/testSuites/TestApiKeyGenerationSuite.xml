@@ -1,12 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="testApiKeyGeneration">
-	<test name="testApiKeyGeneration">
+<suite name="testApiKeyGenerationSuite">
+	<test name="ApiKeyGeneration">
 		<parameter name="email" value="gbaksinskaite@gmail.com" />
 		<parameter name="password" value="ifJ8g@a9jYe8Qy7" />
-		<parameter name="filePath" value="src/test/java/utilities/apiKey2.txt" />
+		<parameter name="filePath" value="src/test/java/utilities/ApiKey.txt" />
 		<classes>
-			<class name="test.TestApiKeyGeneration"/>
+			<class name="test.UI.TestApiKeyGeneration"/>
 		</classes>
 	</test>
 </suite>

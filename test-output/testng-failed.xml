@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [testApiKeyGenerationSuite]">
+  <test thread-count="5" name="ApiKeyGeneration(failed)">
+    <parameter name="password" value="ifJ8g@a9jYe8Qy7"/>
+    <parameter name="filePath" value="src/test/java/utilities/ApiKey.txt"/>
+    <parameter name="email" value="gbaksinskaite@gmail.com"/>
     <classes>
-      <class name="test.TestApiResponseScheme">
+      <class name="test.UI.TestApiKeyGeneration">
         <methods>
-          <include name="testApiResponseScheme"/>
+          <include name="setUpDriver"/>
+          <include name="quitDriver"/>
           <include name="preconditions"/>
+          <include name="testApiKeysGeneration" invocation-numbers="0"/>
         </methods>
-      </class> <!-- test.TestApiResponseScheme -->
+      </class> <!-- test.UI.TestApiKeyGeneration -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- ApiKeyGeneration(failed) -->
+</suite> <!-- Failed suite [testApiKeyGenerationSuite] -->

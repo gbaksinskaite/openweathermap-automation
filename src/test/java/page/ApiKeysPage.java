@@ -10,14 +10,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ApiKeysPage extends AbstractPage {
 
 	public ApiKeysPage(WebDriver driver) {
-		super(driver); 
+		super(driver);
 	}
 
 	/* BUTTONS */
 
 	@FindBy(xpath = "//input[@value = 'Generate']")
 	private WebElement buttonGenerate;
-	
+
 	@FindBy(xpath = "//button[text()='Save']")
 	private WebElement buttonSaveEditedKeyName;
 
@@ -25,7 +25,7 @@ public class ApiKeysPage extends AbstractPage {
 
 	@FindBy(id = "api_key_form_name")
 	private WebElement inputApiKeyName;
-	
+
 	@FindBy(id = "edit_key_form_name")
 	private WebElement inputApiKeyNameNew;
 
@@ -34,40 +34,62 @@ public class ApiKeysPage extends AbstractPage {
 	public void clickButtonGenerate() {
 		buttonGenerate.click();
 	}
-	
+
 	public void clickButtonSaveEditedKeyName() {
 		buttonSaveEditedKeyName.click();
 	}
-	
+
 	public void clickButtonRenameApiKey(String apiKeyName) {
-		new WebDriverWait(driver, 2).until(ExpectedConditions.elementToBeClickable(By.xpath("//td[contains(text(),'" + apiKeyName + "')]/../td[3]/a[1]/i[1]")));
+		new WebDriverWait(driver, 2).until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//td[contains(text(),'" + apiKeyName + "')]/../td[3]/a[1]/i[1]")));
 		driver.findElement(By.xpath("//td[contains(text(),'" + apiKeyName + "')]/../td[3]/a[1]/i[1]")).click();
 	}
 
 	/* ENTER INPUTS */
 
 	public void enterInputApiKeyName(String apiKeyName) {
-		new WebDriverWait(driver, 2).until(ExpectedConditions.elementToBeClickable(inputApiKeyName));
+		waitForElement(inputApiKeyName);
 		inputApiKeyName.sendKeys(apiKeyName);
 	}
-	
+
 	public void enterInputApiKeyNameNew(String apiKeyNameNew) {
-		//new WebDriverWait(driver, 2).until(ExpectedConditions.visibilityOf(inputApiKeyNameNew));
+		waitForElement(inputApiKeyNameNew);		
 		inputApiKeyNameNew.sendKeys(apiKeyNameNew);
 	}
-	
+
 	/* ENTER INPUTS */
 
-	public void clearInputApiKeyInitial() {
-		new WebDriverWait(driver, 2).until(ExpectedConditions.elementToBeClickable(inputApiKeyNameNew));
+	public void clearInputApiKeyInitial() {		
+		waitForElement(inputApiKeyNameNew);
 		inputApiKeyNameNew.clear();
 	}
-	
-	
-	/* GET TEXT*/
-	
+
+	/* GET TEXT */
+
 	public String getApiKey(String apiKeyName) {
-		new WebDriverWait(driver, 2).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//td[contains(text(),'" + apiKeyName + "')]")));
+		new WebDriverWait(driver, 2).until(ExpectedConditions
+				.visibilityOfElementLocated(By.xpath("//td[contains(text(),'" + apiKeyName + "')]/../td[1]/pre")));
 		return driver.findElement(By.xpath("//td[contains(text(),'" + apiKeyName + "')]/../td[1]/pre")).getText();
-	}		
+	}
+
+	/* IS PRESENT */
+
+	public boolean isGeneratedApiKeyFieldDisplayed(String apiKeyName) {
+		return driver.findElement(By.xpath("//td[contains(text(),'" + apiKeyName + "')]/../td[1]/pre")).isDisplayed();
+	}
+
+	/* API KEY ACTIONS */
+
+	public void generateApiKey(String apiKeyName) {		
+		enterInputApiKeyName(apiKeyName);
+		clickButtonGenerate();
+	}
+
+	public void changeApiKeyName(String apiKeyNameInitial, String apiKeyNameAdjusted) {
+		clickButtonRenameApiKey(apiKeyNameInitial);
+		clearInputApiKeyInitial();
+		enterInputApiKeyNameNew(apiKeyNameAdjusted);
+		clickButtonSaveEditedKeyName();
+	}
+
 }

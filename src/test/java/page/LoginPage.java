@@ -25,28 +25,8 @@ public class LoginPage extends AbstractPage {
 	@FindBy(id = "user_password")
 	private WebElement inputPassword;
 
-	/* LINKS */
+	/* CLICK BUTTONS */
 
-	@FindBy(xpath = "//a[contains(text(),'Create an Account.')]")
-	private WebElement linkCreateAnAccount;
-
-	@FindBy(xpath = "//a[contains(text(),'Click here to recover.')]")
-	private WebElement linkRecoverPassword;
-
-	/* CHECKBOXES */
-
-	@FindBy(id = "user_remember_me")
-	private WebElement checkBoxRememberMe;
-
-	/* CLICK LINKS/BUTTONS */
-
-	public void clickLinkCreateAnAccount() {
-		linkCreateAnAccount.click();
-	}
-
-	public void clickLinkRecoverPassword() {
-		linkRecoverPassword.click();
-	}
 
 	public void clickButtonSubmit() {
 		buttonSubmit.click();
@@ -55,7 +35,7 @@ public class LoginPage extends AbstractPage {
 	/* ENTER INPUTS */
 
 	public void enterInputEmail(String email) {
-		waitForElementVisibility(inputEmail);
+		waitForElement(inputEmail);
 		inputEmail.sendKeys(email);
 	}
 
@@ -63,16 +43,19 @@ public class LoginPage extends AbstractPage {
 		inputPassword.sendKeys(password);
 	}
 
-	/* SELECT CHECKBOXES */
-
-	public void selectCheckBoxRememberMe() {
-		checkBoxRememberMe.click(); 
+	/* ENTER INPUTS */
+	
+	public void login(String email, String password) {
+		enterInputEmail(email);
+		enterInputPassword(password);
+		clickButtonSubmit();
 	}
-
-	/* WAITS */
-
-	public void waitForElementVisibility(WebElement element) {
-		new WebDriverWait(driver, 2).until(ExpectedConditions.visibilityOf(element));
-	}
+	
+	
+//	/* WAITS */
+//
+//	public void waitForElementVisibility(WebElement element) {
+//		new WebDriverWait(driver, 2).until(ExpectedConditions.visibilityOf(element));
+//	}
 
 }

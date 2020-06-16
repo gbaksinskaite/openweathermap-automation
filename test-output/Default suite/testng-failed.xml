@@ -3,12 +3,18 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.TestApiResponseScheme">
+      <class name="test.TestApiResponses">
         <methods>
-          <include name="testApiResponseScheme"/>
+          <include name="testApiResponseVerifyZipCode"/>
+          <include name="testApiResponseInvalidKey"/>
           <include name="preconditions"/>
+          <include name="testApiResponseInvalidCityName"/>
+          <include name="testApiResponseVerifyMultilingualSupport"/>
+          <include name="testApiResponseInvalidCityID"/>
+          <include name="testApiResponseVerifyCoordinates"/>
+          <include name="testApiResponseVerifyCityID"/>
         </methods>
-      </class> <!-- test.TestApiResponseScheme -->
+      </class> <!-- test.TestApiResponses -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

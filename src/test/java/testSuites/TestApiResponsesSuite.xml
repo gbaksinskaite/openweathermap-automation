@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="testApiResponses">
-	<test name="testApiResponses">	
-	    <parameter name="filePath" value="src/test/java/utilities/apiKey2.txt" />
+<suite name="testApiResponsesSuite">
+	<test name="ApiResponses">	
+	    <parameter name="filePath" value="src/test/java/utilities/ApiKey.txt" />
 		<parameter name="cityName" value="Vilnius" />
 		<parameter name="apiKey" value="60e77d77c29dd5441" />
 		<parameter name="cityNameInvalid" value="VNO" />
@@ -20,7 +20,7 @@
 		<parameter name="cityId" value="2172797" />
 		<parameter name="cityNameTranslated" value="Kernsas" />
 		<classes>
-			<class name="test.TestApiResponses"/>
+			<class name="test.API.TestApiResponses"/>
 		</classes>
 	</test>
 </suite>

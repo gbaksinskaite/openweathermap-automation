@@ -1,24 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="testApiKeyGenerationSuite" duration-ms="11269" started-at="2020-06-16T10:11:01Z" finished-at="2020-06-16T10:11:13Z">
+  <suite name="TestNGsuite" duration-ms="737091" started-at="2020-06-16T21:11:11Z" finished-at="2020-06-16T21:23:28Z">
     <groups>
       <group name="UI">
         <method signature="TestApiKeyGeneration.testApiKeysGeneration(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="testApiKeysGeneration" class="test.UI.TestApiKeyGeneration"/>
       </group> <!-- UI -->
+      <group name="API">
+        <method signature="TestApiCalls.testApiCallByCityID(java.lang.String, java.lang.String)[pri:3, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallByCityID" class="test.API.TestApiCalls"/>
+        <method signature="TestApiCalls.testApiCallByCityIdInvalid(java.lang.String)[pri:2, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallByCityIdInvalid" class="test.API.TestApiCalls"/>
+        <method signature="TestApiCalls.testApiCallByCityNameInvalid(java.lang.String)[pri:0, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallByCityNameInvalid" class="test.API.TestApiCalls"/>
+        <method signature="TestApiCalls.testApiCallByCoordinates(java.lang.String, java.lang.String, java.lang.String)[pri:5, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallByCoordinates" class="test.API.TestApiCalls"/>
+        <method signature="TestApiCalls.testApiCallByKeyInvalid(java.lang.String, java.lang.String)[pri:1, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallByKeyInvalid" class="test.API.TestApiCalls"/>
+        <method signature="TestApiCalls.testApiCallByZipCode(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallByZipCode" class="test.API.TestApiCalls"/>
+        <method signature="TestApiCalls.testApiCallVerifyMultilingualSupport(java.lang.String, java.lang.String, java.lang.String)[pri:6, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallVerifyMultilingualSupport" class="test.API.TestApiCalls"/>
+        <method signature="TestApiResponseScheme.testApiResponseScheme(java.lang.String)[pri:0, instance:test.API.TestApiResponseScheme@2b552920]" name="testApiResponseScheme" class="test.API.TestApiResponseScheme"/>
+      </group> <!-- API -->
     </groups>
-    <test name="ApiKeyGeneration" duration-ms="11269" started-at="2020-06-16T10:11:01Z" finished-at="2020-06-16T10:11:13Z">
+    <test name="ApiKeyGeneration" duration-ms="13358" started-at="2020-06-16T21:11:11Z" finished-at="2020-06-16T21:11:25Z">
       <class name="test.UI.TestApiKeyGeneration">
-        <test-method status="PASS" signature="setUpDriver()[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="setUpDriver" is-config="true" duration-ms="6118" started-at="2020-06-16T10:11:01Z" finished-at="2020-06-16T10:11:08Z">
+        <test-method status="PASS" signature="setUpDriver()[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="setUpDriver" is-config="true" duration-ms="7410" started-at="2020-06-16T21:11:11Z" finished-at="2020-06-16T21:11:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriver -->
-        <test-method status="PASS" signature="preconditions()[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="preconditions" is-config="true" duration-ms="46" started-at="2020-06-16T10:11:08Z" finished-at="2020-06-16T10:11:08Z">
+        <test-method status="PASS" signature="preconditions()[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="preconditions" is-config="true" duration-ms="95" started-at="2020-06-16T21:11:19Z" finished-at="2020-06-16T21:11:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- preconditions -->
-        <test-method status="PASS" signature="testApiKeysGeneration(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="testApiKeysGeneration" duration-ms="4425" started-at="2020-06-16T10:11:08Z" finished-at="2020-06-16T10:11:12Z">
+        <test-method status="PASS" signature="testApiKeysGeneration(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="testApiKeysGeneration" duration-ms="5114" started-at="2020-06-16T21:11:19Z" finished-at="2020-06-16T21:11:24Z">
           <params>
             <param index="0">
               <value>
@@ -39,11 +49,174 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testApiKeysGeneration -->
-        <test-method status="PASS" signature="quitDriver()[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="quitDriver" is-config="true" duration-ms="648" started-at="2020-06-16T10:11:12Z" finished-at="2020-06-16T10:11:13Z">
+        <test-method status="PASS" signature="quitDriver()[pri:0, instance:test.UI.TestApiKeyGeneration@71423665]" name="quitDriver" is-config="true" duration-ms="703" started-at="2020-06-16T21:11:24Z" finished-at="2020-06-16T21:11:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitDriver -->
       </class> <!-- test.UI.TestApiKeyGeneration -->
     </test> <!-- ApiKeyGeneration -->
-  </suite> <!-- testApiKeyGenerationSuite -->
+    <test name="ApiResponses" duration-ms="723046" started-at="2020-06-16T21:11:25Z" finished-at="2020-06-16T21:23:28Z">
+      <class name="test.API.TestApiCalls">
+        <test-method status="PASS" signature="preconditions(java.lang.String)[pri:0, instance:test.API.TestApiCalls@7b49cea0]" name="preconditions" is-config="true" duration-ms="721843" started-at="2020-06-16T21:11:25Z" finished-at="2020-06-16T21:23:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src/test/java/utilities/ApiKey.txt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preconditions -->
+        <test-method status="PASS" signature="testApiCallByCityNameInvalid(java.lang.String)[pri:0, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallByCityNameInvalid" duration-ms="515" started-at="2020-06-16T21:23:26Z" finished-at="2020-06-16T21:23:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[VNO]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApiCallByCityNameInvalid -->
+        <test-method status="PASS" signature="testApiCallByKeyInvalid(java.lang.String, java.lang.String)[pri:1, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallByKeyInvalid" duration-ms="110" started-at="2020-06-16T21:23:27Z" finished-at="2020-06-16T21:23:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Cairns]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[60e77d77c29dd5441]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApiCallByKeyInvalid -->
+        <test-method status="PASS" signature="testApiCallByCityIdInvalid(java.lang.String)[pri:2, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallByCityIdInvalid" duration-ms="109" started-at="2020-06-16T21:23:27Z" finished-at="2020-06-16T21:23:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[666]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApiCallByCityIdInvalid -->
+        <test-method status="PASS" signature="testApiCallByCityID(java.lang.String, java.lang.String)[pri:3, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallByCityID" duration-ms="125" started-at="2020-06-16T21:23:27Z" finished-at="2020-06-16T21:23:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[2172797]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Cairns]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApiCallByCityID -->
+        <test-method status="PASS" signature="testApiCallByZipCode(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:4, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallByZipCode" duration-ms="125" started-at="2020-06-16T21:23:27Z" finished-at="2020-06-16T21:23:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[94040]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Mountain View]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[37.39]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[-122.09]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApiCallByZipCode -->
+        <test-method status="PASS" signature="testApiCallByCoordinates(java.lang.String, java.lang.String, java.lang.String)[pri:5, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallByCoordinates" duration-ms="109" started-at="2020-06-16T21:23:27Z" finished-at="2020-06-16T21:23:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[24]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[54.4]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Alytus]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApiCallByCoordinates -->
+        <test-method status="PASS" signature="testApiCallVerifyMultilingualSupport(java.lang.String, java.lang.String, java.lang.String)[pri:6, instance:test.API.TestApiCalls@7b49cea0]" name="testApiCallVerifyMultilingualSupport" duration-ms="110" started-at="2020-06-16T21:23:28Z" finished-at="2020-06-16T21:23:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[lt]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[2172797]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Kernsas]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApiCallVerifyMultilingualSupport -->
+      </class> <!-- test.API.TestApiCalls -->
+    </test> <!-- ApiResponses -->
+    <test name="ApiResponseScheme" duration-ms="671" started-at="2020-06-16T21:23:28Z" finished-at="2020-06-16T21:23:28Z">
+      <class name="test.API.TestApiResponseScheme">
+        <test-method status="PASS" signature="preconditions(java.lang.String)[pri:0, instance:test.API.TestApiResponseScheme@2b552920]" name="preconditions" is-config="true" duration-ms="0" started-at="2020-06-16T21:23:28Z" finished-at="2020-06-16T21:23:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[src/test/java/utilities/ApiKey.txt]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- preconditions -->
+        <test-method status="PASS" signature="testApiResponseScheme(java.lang.String)[pri:0, instance:test.API.TestApiResponseScheme@2b552920]" name="testApiResponseScheme" duration-ms="671" started-at="2020-06-16T21:23:28Z" finished-at="2020-06-16T21:23:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1851632]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApiResponseScheme -->
+      </class> <!-- test.API.TestApiResponseScheme -->
+    </test> <!-- ApiResponseScheme -->
+  </suite> <!-- TestNGsuite -->
 </testng-results>

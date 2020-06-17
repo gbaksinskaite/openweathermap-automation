@@ -20,7 +20,7 @@
 		<parameter name="cityId" value="2172797" />
 		<parameter name="cityNameTranslated" value="Kernsas" />
 		<classes>
-			<class name="test.API.TestApiResponses"/>
+			<class name="test.API.TestApiCalls"/>
 		</classes>
 	</test>
 </suite>

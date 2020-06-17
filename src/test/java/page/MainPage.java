@@ -11,15 +11,15 @@ public class MainPage extends AbstractPage {
 	}
 
 	/* LINKS */
-	
+
 	@FindBy(xpath = "//a[text()='Sign in']")
 	private WebElement linkSignIn;
 
-	/* CLICK LINKS */	
-	
+	/* CLICK LINKS */
+
 	public void clickLinkSignIn() {
 		waitForElement(linkSignIn);
-		linkSignIn.click(); 
+		linkSignIn.click();
 
 	}
 

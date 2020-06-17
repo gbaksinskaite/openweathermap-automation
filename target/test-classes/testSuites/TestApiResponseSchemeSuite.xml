@@ -4,8 +4,7 @@
 	<test name="ApiResponseScheme">
 		<parameter name="filePath"
 			value="src/test/java/utilities/ApiKey.txt" />
-		<parameter name="cityId" value="1851632" />
-		<parameter name = "JSONschemePath" value="./utilities/ApiResponseScheme.json" />
+		<parameter name="cityId" value="1851632" />		
 		<classes>
 			<class name="test.API.TestApiResponseScheme" />
 		</classes>

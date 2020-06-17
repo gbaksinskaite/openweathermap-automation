@@ -3,8 +3,6 @@ package page;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends AbstractPage {
 
@@ -27,7 +25,6 @@ public class LoginPage extends AbstractPage {
 
 	/* CLICK BUTTONS */
 
-
 	public void clickButtonSubmit() {
 		buttonSubmit.click();
 	}
@@ -44,18 +41,10 @@ public class LoginPage extends AbstractPage {
 	}
 
 	/* ENTER INPUTS */
-	
+
 	public void login(String email, String password) {
 		enterInputEmail(email);
 		enterInputPassword(password);
 		clickButtonSubmit();
 	}
-	
-	
-//	/* WAITS */
-//
-//	public void waitForElementVisibility(WebElement element) {
-//		new WebDriverWait(driver, 2).until(ExpectedConditions.visibilityOf(element));
-//	}
-
 }

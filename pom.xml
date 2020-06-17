@@ -13,8 +13,8 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.7</maven.compiler.source>
-		<maven.compiler.target>1.7</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencies>
@@ -84,11 +84,30 @@
 					<configuration>
 						<suiteXmlFiles>
 							<!-- pass testng.xml files as argument from command line -->
-							<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+							<suiteXmlFile>${project.basedir}/src/test/java/testSuites/${suiteXmlFile}</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
 
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>3.0.0</version>
+					<executions>
+						<execution>
+							<id>open-report</id>
+							<phase>test</phase>
+							<goals>
+								<goal>java</goal>
+							</goals>
+							<configuration>
+								<mainClass>OpenReport</mainClass>
+								<cleanupDaemonThreads>false</cleanupDaemonThreads>
+							</configuration>
+							<inherited>false</inherited>
+						</execution>
+					</executions>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
